@@ -101,11 +101,27 @@ The goal is to build a predictive model that estimates house prices using featur
 
 
 ---
+## ⚠ Limitations
+
+- **Outdated dataset:** The Boston Housing dataset was collected in the 1970s and may not reflect current housing trends.  
+- **Ethical concerns:** The `B` (Black population) feature has racial bias issues, which is why `load_boston()` was removed from scikit-learn.  
+- **Small dataset size:** Only 506 instances, which limits the ability to train more complex models.  
+- **Model assumptions:**  
+  - Linear Regression assumes linearity, no multicollinearity, and constant variance of residuals. These assumptions are not fully satisfied in this dataset.  
+  - The model is sensitive to outliers.  
+- **Performance:** Linear Regression explained only ~73% variance (R² ≈ 0.73), whereas tree-based models performed better.  
+
+---
 
 ##  Future Work
-- Implement advanced models (XGBoost, Gradient Boosting)  
-- Hyperparameter tuning with GridSearchCV  
-- Deploy model using Flask/Streamlit  
+
+- Use larger and more recent housing datasets (e.g., California Housing dataset).  
+- Apply **feature engineering** to handle non-linear relationships.  
+- Implement **regularization techniques** (Ridge, Lasso, ElasticNet) to handle multicollinearity.  
+- Try **ensemble models** (Random Forest, Gradient Boosting, XGBoost) for better performance.  
+- Perform **cross-validation** to get more reliable performance estimates.  
+- Deploy the model using **Flask / FastAPI / Streamlit** for real-world usability.  
+
 
 ---
 
